@@ -1,174 +1,227 @@
-/*
-:root{
-    --blue-navigation: #1B56FD;
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #17A2B8;
+  --background-color: #F8F9FA;
+  --text-color: #343A40;
+  --cta-color: #28A745;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Fonts */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Fonts/Jua,Roboto/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-body{
-    max-width: 1200px;
-    margin: 0 auto;
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Fonts/Jua,Roboto/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Jua';
+  src: url('./Fonts/Jua,Roboto/Jua-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Contact info */
+#header_contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding: 10px 0 0 0;
+  font-size: 16px;
+}
+
+#header_social_media a img {
+  height: 18px;
+}
+
+/* Header layout */
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0,4rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 3px;
+}
+
+/* Logo on the left */
+#logo_div {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo {
-    max-width: 150px;
-    border-radius: 50%;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
+/* Navigation centered */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
 }
-*/
 
-/* CSS Variables */
-:root {
-    --primary-color: #007BFF;
-    --secondary-color: #17A2B8;
-    --background-color: #F8F9FA;
-    --text-color: #343A40;
-    --cta-color: #28A745;
-  }
+nav .navi {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+nav .navi:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  max-width: 1500px;
+  margin: 50px auto;
+}
+
+#about_us h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#about_us_text_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#about_us_text {
+  max-width: 40%;
+  font-size: 1.2rem;
+  line-height:1.5;
+}
+
+/* About Us Image */
+#about_us_img img {
+  max-width: 95%;
+  height: auto;
+  display: block;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  border-radius: 3px;
+}
+
+/* Services Grid */
+
+#services h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+#services_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.service_card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
   
-  /* Reset & Base Styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  header {
-    background-color: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Contact info */
-  #header_contact {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Logo */
-  #logo_div {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .logo {
-    height: 60px;
-  }
-  
-  /* Navigation */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  nav .navi {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  
-  nav .navi:hover {
-    background-color: var(--primary-color);
-    color: white;
-  }
-  
-  /* Sections */
-  section {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  /* About Us Image */
-  #about_us_img img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 1rem;
-  }
-  
-  /* Services Grid */
-  #services_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  
-  .service_card {
-    background: white;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-  }
-  
-  .service_card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-  
-  /* Contact Us Section */
-  #contact_us {
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: white;
-  }
-  
-  #contact_us button {
-    margin-top: 1rem;
-    background-color: var(--cta-color);
-    border: none;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  #contact_us button:hover {
-    background-color: #218838;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #e9ecef;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  #social_media img {
-    width: 24px;
-    margin: 0 0.5rem;
-  }
-  
+}
+
+
+#last_cards {
+  grid-column: 1 / -1; /* Span entire row */
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  height: 100%;
+}
+
+.four, .five {
+  max-width: 33%;
+}
+
+.service_card img {
+  width: 80%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Contact Us Section */
+#contact_us {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+}
+
+#contact_us button {
+  margin-top: 1rem;
+  background-color: var(--cta-color);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contact_us button:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: #e9ecef;
+  padding: 2rem;
+  text-align: center;
+}
+
+#social_media img {
+  width: 24px;
+  margin: 0 0.5rem;
+}
