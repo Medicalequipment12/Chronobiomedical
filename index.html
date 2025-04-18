@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Medical Equipment Repair</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chrono Biomedical</title>
 </head>
 <body>
-    <div id="header_contact">
-        <p>example@mail.com</p>
-        <p><img src="img/social media icons/telephone-fill.svg" alt="">+1(646)500-9154</p>
-        <div id="header_social_media">
-            <a href=""><img src="img/social media icons/facebook.svg" alt=""></a>
-            <a href=""><img src="img/social media icons/instagram.svg" alt=""></a>
-            <a href=""><img src="img/social media icons/whatsapp.svg" alt=""></a>
+  <div id="header_contact">
+        <div id="header-email-phone-div">
+            <p id="email-item">✉️ info@chronobiomedical.com</p>
+            <p id="phone">📞 +1(646)500-9154</p>
         </div>
-    </div>
+        <div id="header_social_media">
+            <a href=""><img src="img/social media icons/linkedin.png" class="linkedin-icon" alt=""></a>
+            <a href=""><img src="img/social media icons/instagram.png" class="instagram-icon" alt=""></a>
+            <a href=""><img src="img/social media icons/whatsapp.png" class="whatsapp-icon" alt=""></a>
+        </div>
+  </div>
     <header>
         <div id="logo_div">
             <a href="index.html"><img src="img/logo/logo.png" class="logo" alt=""></a>
         </div>
         <nav>
-            <a href="#Home" class="navi">Home</a>
-            <a href="#Services" class="navi">Our Services</a>
+            <a href="index.html" class="navi">Home</a>
             <a href="#About Us" class="navi">About Us</a>
-            <a href="#Contact" class="navi">Contact</a>
-        </nav>
+            <div class="dropdown-wrapper">
+              <a href="#Home" class="navi our-services">Services <img src="img/icons/arrow_down.svg" alt=""></a>
+              <div class="dropdown-content">
+                <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
+                <a href="#" class="bar-item">Preventive Maintenance</a>
+                <a href="#" class="bar-item">Pressure Regulators</a>
+                <a href="#" class="bar-item">Dental X-ray Units</a>
+                <a href="#" class="bar-item">Wheelchair Service and Maintenance</a>
+              </div>
+            </div>
+            <a href="contact.html" class="navi">Contact</a>
+          </nav>
     </header>
     <section id="about_us">
+        <div></div>
         <h2>About Us</h2>
         <div id="about_us_text_div">
             <p id="about_us_text">At Chrono Biomedical, we are committed to keeping essential medical equipment operating safely and efficiently. 
@@ -44,7 +56,6 @@
                 <img src="img/1.png" alt="">
             </div> 
         </div>
-        
     </section>
     <section id="services">
         <h2>Our Services</h2>
@@ -93,18 +104,72 @@
             </div>
         </div>
     </section>
+    <section id="why-choose-us">
+        <h2>Why Us</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="number" data-target="50">0</div>
+            <p class="why-choos-us-cards-name">Happy Clients</p>
+            <p class="why-choos-us-cards-text">We've successfully served over 100 clients across the medical field, providing fast, 
+                dependable repair solutions that keep their equipment running smoothly.
+            </p>
+          </div>
+          <div class="card">
+            <div class="number" data-target="5">0</div>
+            <p class="why-choos-us-cards-name">Years of Experience</p>
+            <p class="why-choos-us-cards-text">With over five years of hands-on experience in biomedical repair, we’ve built a reputation for accuracy, 
+                speed, and long-term reliability in every service we provide.</p>
+          </div>
+          <div class="card">
+            <div class="number" data-target="24">0</div>
+            <p class="why-choos-us-cards-name">Avg. Hour Repair Time</p>
+            <p class="why-choos-us-cards-text">We understand that every minute counts in the medical world. That’s why we offer an average repair turnaround of 
+                just 24 hours to keep your operations flowing.</p>
+          </div>
+          <div class="card">
+            <div class="number" data-target="10">0</div>
+            <p class="why-choos-us-cards-name">Certified Technicians</p>
+            <p class="why-choos-us-cards-text">Our team includes 10 highly trained and certified technicians, each equipped with the expertise to diagnose and 
+                repair a wide range of medical equipment with precision.</p>
+          </div>
+        </div>
+      </section>
     <section id="contact_us">
         <h2>Are You Ready to Redefine Your Healthcare Services?</h2>
         <p>We can help you out</p>
-        <button>Contact Us</button>
+        <button id="contactBtn">Contact Us</button>
     </section>
     <footer>
-        <img src="img/logo/logo.png" class="logo" alt="">
-        <div id="social_media">
-            <a href=""><img src="img/social media icons/facebook.svg" alt=""></a>
-            <a href=""><img src="img/social media icons/instagram.svg" alt=""></a>
-            <a href=""><img src="img/social media icons/whatsapp.svg" alt=""></a>
+        <div class="footer-container">
+          <div class="footer-col">
+            <img src="img/logo/logo.png" alt="Chrono Biomedical" class="footer-logo" />
+            <p>Specializing in professional medical equipment repair services.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📞 +1(646)500-9154</p>
+            <p>✉️ info@chrono-biomedical.de</p>
+            <p>📍 New-York, USA</p>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <div class="social-icons">
+              <img src="img/social media icons/linkedin.png" class="linkedin-icon" />
+              <img src="img/social media icons/instagram.png" class="instagram-icon" />
+              <img src="img/social media icons/whatsapp.png" class="whatsapp-icon" />
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
+    <script src="script.js"></script>
 </body>
 </html>
