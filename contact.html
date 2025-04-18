@@ -24,15 +24,15 @@
         </div>
         <nav>
             <a href="index.html" class="navi">Home</a>
-            <a href="#About Us" class="navi">About Us</a>
+            <a href="aboutUs.html" class="navi">About Us</a>
             <div class="dropdown-wrapper">
               <a href="#Home" class="navi our-services">Services <img src="img/icons/arrow_down.svg" alt=""></a>
               <div class="dropdown-content">
                 <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
-                <a href="#" class="bar-item">Preventive Maintenance</a>
-                <a href="#" class="bar-item">Pressure Regulators</a>
-                <a href="#" class="bar-item">Dental X-ray Units</a>
-                <a href="#" class="bar-item">Wheelchair Service and Maintenance</a>
+                <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
+                <a href="Pressure.html" class="bar-item">Pressure Regulators</a>
+                <a href="dental.html" class="bar-item">Dental X-ray Units</a>
+                <a href="wheelchair.html" class="bar-item">Wheelchair Service and Maintenance</a>
               </div>
             </div>
             <a href="contact.html" class="navi">Contact</a>
@@ -101,5 +101,32 @@
         </div>
       </footer>
     <script src="script.js"></script>
+    <script>
+      document.querySelector('.contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const subject = document.querySelector('#subject').value;
+        const message = document.querySelector('#message').value;
+    
+        fetch('http://localhost:3001/send-message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, subject, message }),
+        })
+          .then(res => res.json())
+          .then(data => {
+            alert(data.message || 'Message sent!');
+            document.querySelector('.contact-form').reset();
+          })
+          .catch(err => {
+            console.error('Error:', err);
+            alert('There was an error sending your message.');
+          });
+      });
+    </script>
 </body>
 </html>

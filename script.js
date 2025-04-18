@@ -75,3 +75,31 @@ document.querySelectorAll('.whatsapp-icon').forEach(function(icon) {
     window.open('https://wa.me/16465009154', '_blank'); // Replace with your number
   });
 });
+
+//Nodemailer logic
+
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.querySelector('#name').value;
+  const email = document.querySelector('#email').value;
+  const subject = document.querySelector('#subject').value;
+  const message = document.querySelector('#message').value;
+
+  fetch('http://localhost:3001/send-message', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, email, subject, message }),
+  })
+    .then(res => res.json())
+    .then(data => {
+      alert(data.message || 'Message sent!');
+      document.querySelector('.contact-form').reset();
+    })
+    .catch(err => {
+      console.error('Error:', err);
+      alert('There was an error sending your message.');
+    });
+});
