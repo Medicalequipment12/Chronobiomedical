@@ -7,6 +7,7 @@
     --cta-color: #28A745;
     --Test-footer-color: #e9ecef;
     --test-footer-color2:#e2e7ec	;
+    --navigation-color: #ffffff;
   }
   
   /* Fonts */
@@ -96,7 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: white;
     padding: 0.5rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
@@ -123,8 +124,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    flex-grow: 1;
-    margin-right: 180px;
   }
   
   /* Navigation links */
@@ -134,14 +133,14 @@
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    font-size: 1.5rem;
-    transition: background 0.3s ease;
+    font-size: 1.3rem;
+    transition: background 0.4s ease;
     position: relative;
   }
   
   .navi:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #f2f7ff;
+    /* color: white; */
   }
   
   /* Dropdown wrapper */
@@ -181,11 +180,16 @@
     background-color: #d3d4d4;
     padding: 1px;
   }
+
+  section {
+    padding: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
   
   
   .about-section {
     padding: 4rem 2rem;
-    background: white;
   }
   
   .about-wrapper {
@@ -195,22 +199,24 @@
     justify-content: center;
     gap: 3rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
   
   .about-text {
     flex: 1 1 500px;
   }
   
-  .about-text h1 {
-    font-size: 2.4rem;
+  .about-section h1 {
     color: #007BFF;
     margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
   }
   
   .about-text p {
-    margin-bottom: 1.2rem;
     font-size: 1.1rem;
+    margin-top: 1rem;
   }
   
   .about-image {
@@ -249,6 +255,7 @@
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: 3rem;
   }
   
   .stat-number {
@@ -341,28 +348,161 @@
     transform: scale(1.1);
   }
   
-  @media (max-width: 768px) {
-    .about-wrapper {
+  @media (max-width: 1250px) {
+    .navi {
+      font-size: 1rem
+    }
+  }
+
+  @media (max-width: 1125px) {
+
+    nav{
+      gap: 0.3rem
+    }
+    #phone_number {
+      font-family: 1rem;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+
+    /* navigation */
+  
+    nav {
+      display: flex;
       flex-direction: column;
-      text-align: center;
-    }
-  
-    .stats-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .footer-container {
-      flex-direction: column;
-      text-align: center;
-      gap: 40px;
-    }
-  
-    .footer-col {
       align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 30%;
+     }
+  
+     .our-services {
+     margin: 0 auto;
+  }
+  
+    .navi {
+      margin: 0 auto;
     }
   
-    .social-icons {
+  
+    .navi {
+      font-size: 1rem;
+      padding: 5px 5px;
+    }
+  
+    #services_cards {
+      /* grid-template-columns: 1fr 1fr; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      gap: 2rem;
+    }
+  
+    #last_cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .four,
+    .five {
+      max-width: 100%;
+    }
+  
+    .service_card img {
+      width: 50%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      font-size: 2rem;
+    }
+   
+   /* about us Div */
+    #about_us_text_div {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #about_us_text {
+      max-width: 90%;
+    }
+  
+    #about_us_img img {
+      width: 100%;
     }
   }
   
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: row;
+      align-items: center;
+  
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .logo  {
+      width: 100px;
+    }
+  
+    .navi {
+      font-size: 1.1rem;
+      padding: 0.2rem 0;
+    }
+  
+    #phone {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+  
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.2rem;
+    }
+  
+    #about_us_text {
+      font-size: 1rem;
+    }
+   
+  }
+  
+  @media (max-width: 350px) {
+    .navi {
+      font-size: 0.8rem;
+      padding: 0.1rem 0;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+

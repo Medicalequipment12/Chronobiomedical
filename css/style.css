@@ -6,7 +6,8 @@
   --text-color: #343A40;
   --cta-color: #28A745;
   --Test-footer-color: #e9ecef;
-  --test-footer-color2:#e2e7ec	;
+  --test-footer-color2:#e2e7ec;
+  --navigation-color: #ffffff;
 }
 
 /* Fonts */
@@ -47,26 +48,30 @@ body {
   margin: 0 auto;
 }
 
+h2{
+  color: var(--primary-color);
+}
+
 /* Contact info */
-#header_contact {
+/* #header_contact {
   display: flex;
   justify-content: center;
   gap: 2rem;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   padding-top: 10px;
-}
+} */
 
 #email-item, #phone {
   font-weight: 600;
 }
 
-#header-email-phone-div {
+/* #header-email-phone-div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
+} */
 
 #phone {
   display: flex;
@@ -96,7 +101,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background-color: white;
   padding: 0.5rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -123,8 +128,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  flex-grow: 1;
-  margin-right: 180px;
 }
 
 /* Navigation links */
@@ -134,14 +137,14 @@ nav {
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  font-size: 1.5rem;
-  transition: background 0.3s ease;
+  font-size: 1.3rem;
+  transition: background 0.4s ease;
   position: relative;
 }
 
 .navi:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #f2f7ff;
+  /* color: white; */
 }
 
 /* Dropdown wrapper */
@@ -203,19 +206,21 @@ section {
   gap: 50px;
   margin-top: 3rem;
 }
-#about_us_img{
+/* #about_us_img{
   max-width: 100%;
-}
+} */
 
 #about_us_img img {
   max-width: 100%;
   border-radius: 3px;
 }
 
+
+
 #about_us_text {
   max-width: 40%;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 /* Services Grid */
@@ -302,7 +307,6 @@ section {
   font-size: 2.5rem;
   font-weight: bold;
   color: #007bff;
-  
 }
 
 
@@ -319,21 +323,32 @@ section {
   background-color: white;
   margin-top: 5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url(img/123.png);
+  background-size: cover;           /* make the image cover the whole div */
+  background-position: center;      /* center the image */
+  background-repeat: no-repeat;     /* prevent the image from repeating */
+  color: white;  
+  border-radius: 3px;               
+}
+
+#contact_us h2 {
+  color: white;
 }
 
 #contact_us button {
   margin-top: 1rem;
   background-color: var(--primary-color);
-  border: none;
+  border: solid 1px white;
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 #contact_us button:hover {
-  background-color: #007BFF;
+  background-color: #5d9adb;
 }
 
 /* Footer */
@@ -360,7 +375,6 @@ footer {
   margin-left: 45px;
   
 }
-
 
 .footer-logo {
   width: 140px;
@@ -416,20 +430,135 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
+@media (max-width: 1024px) {
+
+  /* navigation */
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 30%;
+   }
+
+   .our-services {
+   margin: 0 auto;
+}
+
+  .navi {
+    margin: 0 auto;
+  }
+
+
+  .navi {
+    font-size: 1rem;
+    padding: 5px 5px;
+  }
+
+  #services_cards {
+    /* grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #last_cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .four,
+  .five {
+    max-width: 100%;
+  }
+
+  .service_card img {
+    width: 50%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }
+ 
+ /* about us Div */
+  #about_us_text_div {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
   }
 
-  .footer-col {
-    align-items: center;
+  #about_us_text {
+    max-width: 90%;
   }
 
-  .social-icons {
-    justify-content: center;
+  #about_us_img img {
+    width: 100%;
   }
 }
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo  {
+    width: 100px;
+  }
+
+  .navi {
+    font-size: 1.1rem;
+    padding: 0.2rem 0;
+  }
+
+  #phone {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem;
+  }
+
+  #about_us_text {
+    font-size: 1rem;
+  }
+ 
+}
+
+@media (max-width: 350px) {
+  .navi {
+    font-size: 0.8rem;
+    padding: 0.1rem 0;
+  }
+}
+
 
 
