@@ -103,3 +103,19 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
       alert('There was an error sending your message.');
     });
 });
+
+
+//Burger menu logic
+// function toggleMenu() {
+//     document.getElementById("nav-container").classList.toggle("show");
+//   }
+
+  function toggleMenu() {
+    const navContainer = document.getElementById("nav-container");
+    const burger = document.getElementById("burger");
+
+    navContainer.classList.toggle("show");
+    burger.classList.toggle("rotate");
+  }
+
+

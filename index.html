@@ -19,14 +19,20 @@
         </div>
   </div> -->
     <header>
+      <div id="header_tester">
         <div id="logo_div">
             <a href="index.html"><img src="img/logo/logo_blue_only.png" class="logo" alt=""></a>
         </div>
+      <div id="burger" onclick="toggleMenu()">
+          ☰
+        </div>
+       </div> 
+      <div id="nav-container">
         <nav>
             <a href="index.html" class="navi">Home</a>
             <a href="aboutUs.html" class="navi">About Us</a>
             <div class="dropdown-wrapper">
-              <a href="" class="navi our-services">Services▼</a>
+              <a href="" class="navi our-services">Services<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6H4Z" /></svg></a>
               <div class="dropdown-content">
                 <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
                 <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
@@ -37,6 +43,7 @@
             </div>
             <a href="contact.html" class="navi">Contact</a>
           </nav>
+      </div>  
           <p id="phone"><img src="img/icons/phone12.png" style="width: 20px;" alt="">+1(646)500-9154</p>
     </header>
     <section id="about_us">
