@@ -301,6 +301,7 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: center;
   height: 100%;
+  width: 100%;
 }
 
 #last_cards {
@@ -733,6 +734,10 @@ footer {
 
    .service_card {
     width: 100%;
+  }
+
+  .social-icons {
+    margin-bottom: 30px;
   }
 }
 
