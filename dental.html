@@ -20,33 +20,41 @@
     </div>
   </div> -->
   <header>
-    <div id="logo_div">
-        <a href="index.html"><img src="img/logo/logo_blue_only.png" class="logo" alt=""></a>
-    </div>
-    <nav>
-        <a href="index.html" class="navi">Home</a>
-        <a href="aboutUs.html" class="navi">About Us</a>
-        <div class="dropdown-wrapper">
-          <a href="" class="navi our-services">Services<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6H4Z" /></svg></a>
-          <div class="dropdown-content">
-            <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
-            <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
-            <a href="Pressure.html" class="bar-item">Suction Regulator Service</a>
-            <a href="dental.html" class="bar-item">Dental X-ray Units</a>
-            <a href="wheelchair.html" class="bar-item">Wheelchair Service and Maintenance</a>
-          </div>
+      <div id="header_tester">
+        <div id="logo_div">
+            <a href="index.html"><img src="img/logo/logo_blue_only.png" class="logo" alt=""></a>
         </div>
-        <a href="contact.html" class="navi">Contact</a>
-      </nav>
-      <p id="phone"><img src="img/icons/phone12.png" style="width: 20px;" alt="">+1(646)500-9154</p>
-</header>
+        <div id="burger" onclick="toggleMenu()">
+          ☰
+        </div>
+      </div> 
+      <div id="nav-container">
+        <nav>
+            <a href="index.html" class="navi">Home</a>
+            <a href="aboutUs.html" class="navi">About Us</a>
+            <div class="dropdown-wrapper">
+              <a href="" class="navi our-services">Services<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6H4Z" /></svg></a>
+              <div class="dropdown-content">
+                <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
+                <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
+                <a href="suction.html" class="bar-item">Suction Regulator Service</a>
+                <a href="dental.html" class="bar-item">Dental X-ray Units</a>
+                <a href="bed.html" class="bar-item">Hospital Bed Service and Preventative Maintenance</a>
+                <a href="wheelchair.html" class="bar-item">Wheelchair Service and Maintenance</a>
+              </div>
+            </div>
+            <a href="contact.html" class="navi">Contact</a>
+          </nav>
+      </div>
+          <p id="phone"><img src="img/icons/phone12.png" style="width: 20px;" alt="">+1(646)500-9154</p>
+    </header>
   <!-- Service Content -->
   <section class="service-detail">
     <h1>Dental X-ray Units</h1>
     <div class="service-content">
       <div class="main-image">
         <div class="main-image">
-          <img src="img/cards/3.jpg" alt="Dental X-ray Unit" class="service-image">
+          <img src="img/cards/dental_xray.jpg" alt="Dental X-ray Unit" class="service-image" style="width:600px;">
         </div>
       </div>
       <div class="service-description">
@@ -89,9 +97,9 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <!-- <li><a href="/services.html">Services</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -110,5 +118,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

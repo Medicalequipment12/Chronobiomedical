@@ -185,6 +185,8 @@ nav {
   padding: 1px;
 }
 
+/* Burger menu */
+
 #burger {
   display: none;
   font-size: 2rem;
@@ -227,7 +229,6 @@ section {
 }
 
 
-
 #about_us_text {
   max-width: 40%;
   font-size: 1.1rem;
@@ -258,21 +259,18 @@ section {
 }
 
 #last_cards {
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
   display: flex;
   justify-content: center;
   gap: 3rem;
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
 }
 
-.four,
-.five {
-  max-width: 33%;
-}
 
 .service_card img {
   width: 80%;
-  height: 180px;
+  height: 300px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
@@ -440,6 +438,7 @@ footer {
   transform: scale(1.1);
 }
 
+
 /* Responsive */
 @media (max-width: 1024px) {
   /* navigation */
@@ -482,10 +481,10 @@ footer {
     gap: 2rem;
   }
 
-  .four,
+  /* .four,
   .five {
     max-width: 100%;
-  }
+  } */
 
   .service_card img {
     width: 50%;
@@ -514,7 +513,6 @@ footer {
 
 @media (max-width: 768px) {
  
-
   #header_tester {
     display: flex;
     justify-content: space-between;
@@ -545,7 +543,7 @@ footer {
 
   #nav-container.show nav {
     display: flex;
-    width:90%
+    width:90%;
   }
 
   .navi {

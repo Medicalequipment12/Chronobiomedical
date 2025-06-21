@@ -180,6 +180,18 @@
     background-color: #d3d4d4;
     padding: 1px;
   }
+
+
+  #burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  }
+
+  #burger.rotate {
+  transform: rotate(90deg);
+  }
   
   
   /* Header and footer use existing shared styles - not duplicated here */
@@ -314,131 +326,159 @@
   @media (max-width: 1024px) {
 
     /* navigation */
-  
+
     nav {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      width: 30%;
+      gap: 1.7rem;
+      width: 100%;
      }
   
-     .our-services {
+    .our-services {
      margin: 0 auto;
   }
-  
-    .navi {
-      margin: 0 auto;
-    }
-  
+
+    #phone{
+    font-size: 0.8rem;
+  }
   
     .navi {
       font-size: 1rem;
       padding: 5px 5px;
+      margin: 0 auto;
     }
   
-    #services_cards {
-      /* grid-template-columns: 1fr 1fr; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-  
-    #last_cards {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-  
-    .four,
-    .five {
-      max-width: 100%;
-    }
-  
-    .service_card img {
-      width: 50%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      margin-top: 1.5rem;
-      font-size: 2rem;
-    }
-   
-   /* about us Div */
-    #about_us_text_div {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    #about_us_text {
-      max-width: 90%;
-    }
-  
-    #about_us_img img {
-      width: 100%;
-    }
   }
   
   
   @media (max-width: 768px) {
-    header {
+
+  #header_tester {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    position: relative;
+    
+  }
+
+  .logo  {
+    width: 150px;
+  }
+  
+    /* header {
       flex-direction: row;
       align-items: center;
   
-    }
+    } */
   
     nav {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    gap: 0.2rem;
+    padding: 0.1rem;
+  }
+
+  #nav-container.show nav {
+    display: flex;
+    width:90%;
+  }
   
-    .logo  {
-      width: 100px;
-    }
-  
-    .navi {
-      font-size: 1.1rem;
-      padding: 0.2rem 0;
-    }
+  .navi {
+    width: 100%;
+    padding: 0.1rem 0;
+    font-size: 1rem;
+  }
+
+
+  .dropdown-wrapper {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 2rem;
+  }
   
     #phone {
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
+    padding-left: 1rem;
+  }
+
+  #nav-container.show #phone {
+    display: block;
+  }
+
+    #burger {
+    display: block;
+  }
   }
   
   
   @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-  
-    }
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.2rem;
-    }
-  
-    #about_us_text {
-      font-size: 1rem;
-    }
-   
+  header {
+    flex-direction: column;
+    align-items: start;
   }
+
+  #header_tester {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    
+  }
+
+  #logo_div{
+    width: 120px;
+    height: 50px;
+  }
+
+  #phone {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    padding: 0.2rem;
+  }
+
+  #nav-container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  #phone {
+    padding-left: 0rem;
+  }
+
+ 
+}
   
   @media (max-width: 350px) {
-    .navi {
-      font-size: 0.8rem;
-      padding: 0.1rem 0;
-    }
+  .navi {
+    font-size: 0.8rem;
+    padding: 0.1rem 0;
   }
+
+  #logo_div{
+    height: 40px;
+  }
+}
   
   
