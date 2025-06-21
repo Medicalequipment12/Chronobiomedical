@@ -730,6 +730,10 @@ footer {
   #logo_div{
     height: 40px;
   }
+
+   .service_card {
+    width: 85%;
+  }
 }
 
 
