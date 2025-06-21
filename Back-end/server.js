@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 const app = express();
@@ -10,18 +11,41 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/send-message', async (req, res) => {
-  const { name, email, subject, message } = req.body;
+// 🛡️ Rate limiting (5 requests per hour per IP)
+const limiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5,
+  message: { message: 'Too many submissions from this IP. Try again in an hour.' },
+});
+app.use('/send-message', limiter);
 
-  // ✅ Log the incoming form data
-  console.log('📨 Contact form data received:');
-  console.log('Name:', name);
-  console.log('Email:', email);
-  console.log('Subject:', subject);
-  console.log('Message:', message);
+// 🧼 Sanitize helper
+function sanitizeInput(str) {
+  return String(str).replace(/<[^>]*>?/gm, '').trim();
+}
+
+app.post('/send-message', async (req, res) => {
+  let { name, email, subject, message, website } = req.body;
+
+  // 🛑 Honeypot check
+  if (website && website.trim() !== '') {
+    console.warn('🚨 Bot detected via honeypot!');
+    return res.status(400).json({ message: 'Bot submission blocked.' });
+  }
+
+  // Sanitize inputs
+  name = sanitizeInput(name);
+  email = sanitizeInput(email);
+  subject = sanitizeInput(subject);
+  message = sanitizeInput(message);
+
+  // Email format check
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!validEmail) {
+    return res.status(400).json({ message: 'Invalid email address.' });
+  }
 
   try {
-    // ✅ Use Gmail as the email provider
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -29,9 +53,6 @@ app.post('/send-message', async (req, res) => {
         pass: process.env.EMAIL_PASS,
       },
     });
-
-    // ✅ Log before sending
-    console.log('📧 Sending email...');
 
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
@@ -50,7 +71,6 @@ app.post('/send-message', async (req, res) => {
     res.status(200).json({ message: 'Message sent successfully!' });
   } catch (error) {
     console.error('❌ Error sending email:', error.message);
-    console.error('📜 Full error:', error);
     res.status(500).json({ message: 'Failed to send message', error: error.message });
   }
 });

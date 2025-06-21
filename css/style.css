@@ -235,6 +235,51 @@ section {
   line-height: 1.4;
 }
 
+/* Banner  */
+#cta-banner {
+  /* background: linear-gradient(to right, #007BFF, #4A90E2); */
+  color: white;
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+  border-radius: 3px;
+  background-image: url(img/Blue\ 1.png);
+  /* max-width: 1200px; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-size: cover;           /* make the image cover the whole div */
+  background-position: center;      /* center the image */
+  background-repeat: no-repeat;
+}
+
+.cta-content h2 {
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  /* max-width: 700px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  border: solid 1px white;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #5d9adb;
+}
+
+
 /* Services Grid */
 #services h2 {
   text-align: center;
@@ -277,6 +322,7 @@ section {
   margin-top: 1.5rem;
   font-size: 2rem;
 }
+
 
 /* Why Us div */
 #why-choose-us {
@@ -374,7 +420,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 30px auto;
   gap: 30px;
 }
 
@@ -439,6 +485,52 @@ footer {
 }
 
 
+/* Cookies */
+/* Add to your CSS file, like privacy.css or style.css */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.cookie-banner a {
+  color: #76c7ff;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cookie-banner button:hover {
+  background-color: #45a049;
+}
+
+
+
+
 /* Responsive */
 @media (max-width: 1024px) {
   /* navigation */
@@ -475,6 +567,10 @@ footer {
     gap: 2rem;
   }
 
+  .service_card {
+    width: 70%;
+  }
+
   #last_cards {
     flex-direction: column;
     align-items: center;
@@ -487,14 +583,15 @@ footer {
   } */
 
   .service_card img {
-    width: 50%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    font-size: 2rem;
-  }
+  width: 50%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
  
  /* about us Div */
   #about_us_text_div {

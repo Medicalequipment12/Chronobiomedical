@@ -1,145 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact.css">
-    <title>Medical Equipment Repair</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/contact.css" />
+  <title>Medical Equipment Repair</title>
 </head>
 <body>
-    <!-- <div id="header_contact">
-        <div id="header-email-phone-div">
-            <p id="email-item">✉️ info@chronobiomedical.com</p>
-            <p id="phone">📞 +1(646)500-9154</p>
-        </div>
-        <div id="header_social_media">
-            <a href=""><img src="img/social media icons/linkedin.png" class="linkedin-icon" alt=""></a>
-            <a href=""><img src="img/social media icons/instagram.png" class="instagram-icon" alt=""></a>
-            <a href=""><img src="img/social media icons/whatsapp.png" class="whatsapp-icon" alt=""></a>
-        </div>
-  </div> -->
   <header>
-      <div id="header_tester">
-        <div id="logo_div">
-            <a href="index.html"><img src="img/logo/logo_blue_only.png" class="logo" alt=""></a>
-        </div>
-        <div id="burger" onclick="toggleMenu()">
-          ☰
-        </div>
-      </div> 
-      <div id="nav-container">
-        <nav>
-            <a href="index.html" class="navi">Home</a>
-            <a href="aboutUs.html" class="navi">About Us</a>
-            <div class="dropdown-wrapper">
-              <a href="" class="navi our-services">Services<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6H4Z" /></svg></a>
-              <div class="dropdown-content">
-                <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
-                <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
-                <a href="suction.html" class="bar-item">Suction Regulator Service</a>
-                <a href="dental.html" class="bar-item">Dental X-ray Units</a>
-                <a href="bed.html" class="bar-item">Hospital Bed Service and Preventative Maintenance</a>
-                <a href="wheelchair.html" class="bar-item">Wheelchair Service and Maintenance</a>
-              </div>
-            </div>
-            <a href="contact.html" class="navi">Contact</a>
-          </nav>
+    <div id="header_tester">
+      <div id="logo_div">
+        <a href="index.html"><img src="img/logo/logo_blue_only.png" class="logo" alt="" /></a>
       </div>
-          <p id="phone"><img src="img/icons/phone12.png" style="width: 20px;" alt="">+1(646)500-9154</p>
-    </header>
-    <section>
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <div class="social-icons social-icons-contact">
-              <img src="img/social media icons/linkedin.png" class="linkedin-icon" />
-              <img src="img/social media icons/instagram.png" class="instagram-icon" />
-              <img src="img/social media icons/whatsapp.png" class="whatsapp-icon" />
-            </div>
-            <p class="contact-intro">
-                Let's stay in touch! You can call us directly or send us a message — we’ll get back to you as soon as possible.
-              </p>
-            <form action="/send-message" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required />
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-    
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" />
-            </div>
-    
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-          <div class="footer-col">
-            <img src="img/logo/logo_blue_only.png" alt="Chrono Biomedical" class="footer-logo" />
-            <p>Specializing in professional medical equipment repair services.</p>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutUs.html">About</a></li>
-              <!-- <li><a href="/services.html">Services</a></li> -->
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <p><img src="img/icons/phone12.png" style="width:20px;" alt=""> +1(646)500-9154</p>
-            <p>✉️ info@chronobiomedical.de</p>
-            <p><img src="img/icons/location.png" style="width:20px;" alt=""> New-York, USA</p>
-          </div>
-          <div class="footer-col">
-            <h4>Connect</h4>
-            <div class="social-icons">
-              <img src="img/social media icons/linkedin.png" class="linkedin-icon" />
-              <img src="img/social media icons/instagram.png" class="instagram-icon" />
-              <img src="img/social media icons/whatsapp.png" class="whatsapp-icon" />
-            </div>
+      <div id="burger" onclick="toggleMenu()">☰</div>
+    </div>
+    <div id="nav-container">
+      <nav>
+        <a href="index.html" class="navi">Home</a>
+        <a href="aboutUs.html" class="navi">About Us</a>
+        <div class="dropdown-wrapper">
+          <a href="" class="navi our-services">Services
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6L8 10L12 6H4Z" />
+            </svg>
+          </a>
+          <div class="dropdown-content">
+            <a href="Linear.html" class="bar-item">Linear accelerator repair service</a>
+            <a href="Preventive.html" class="bar-item">Preventive Maintenance</a>
+            <a href="suction.html" class="bar-item">Suction Regulator Service</a>
+            <a href="dental.html" class="bar-item">Dental X-ray Units</a>
+            <a href="bed.html" class="bar-item">Hospital Bed Service and Preventative Maintenance</a>
+            <a href="wheelchair.html" class="bar-item">Wheelchair Service and Maintenance</a>
           </div>
         </div>
-      </footer>
-    <script src="script.js"></script>
-    <script>
-      document.querySelector('.contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-    
-        const name = document.querySelector('#name').value;
-        const email = document.querySelector('#email').value;
-        const subject = document.querySelector('#subject').value;
-        const message = document.querySelector('#message').value;
-    
-        fetch('http://localhost:3001/send-message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, subject, message }),
-        })
-          .then(res => res.json())
-          .then(data => {
-            alert(data.message || 'Message sent!');
-            document.querySelector('.contact-form').reset();
-          })
-          .catch(err => {
-            console.error('Error:', err);
-            alert('There was an error sending your message.');
-          });
-      });
-    </script>
+        <a href="contact.html" class="navi">Contact</a>
+      </nav>
+    </div>
+    <p id="phone"><img src="img/icons/phone12.png" style="width: 20px;" alt="">+1(646)500-9154</p>
+  </header>
+
+  <section>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <div class="social-icons social-icons-contact">
+        <img src="img/social media icons/linkedin.png" class="linkedin-icon" />
+        <img src="img/social media icons/instagram.png" class="instagram-icon" />
+        <img src="img/social media icons/whatsapp.png" class="whatsapp-icon" />
+      </div>
+      <p class="contact-intro">
+        Let's stay in touch! You can call us directly or send us a message — we’ll get back to you as soon as possible.
+      </p>
+      <form action="/send-message" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- 🛡️ Honeypot field (hidden from users) -->
+        <div style="display: none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" autocomplete="off" />
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="img/logo/logo_blue_only.png" alt="Chrono Biomedical" class="footer-logo" />
+        <p>Specializing in professional medical equipment repair services.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="tos.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><img src="img/icons/phone12.png" style="width:20px;" alt=""> +1(646)500-9154</p>
+        <p>✉️ info@chronobiomedical.de</p>
+        <p><img src="img/icons/location.png" style="width:20px;" alt=""> New-York, USA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <img src="img/social media icons/linkedin.png" class="linkedin-icon" />
+          <img src="img/social media icons/instagram.png" class="instagram-icon" />
+          <img src="img/social media icons/whatsapp.png" class="whatsapp-icon" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+/* === General Layout === */
+#privacy-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Page Title === */
+#privacy-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2a43;
+}
+
+/* === Last Updated Text === */
+#last-updated {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* === Section Headings === */
+.privacy-heading {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #0f3a5c;
+}
+
+/* === Paragraphs === */
+.privacy-paragraph {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* === Lists === */
+.privacy-list {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+/* === Responsive Padding === */
+@media (max-width: 600px) {
+  #privacy-main {
+    padding: 1rem;
+  }
+}
