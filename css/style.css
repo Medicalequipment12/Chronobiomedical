@@ -568,7 +568,7 @@ footer {
   }
 
   .service_card {
-    width: 70%;
+    width: 90%;
   }
 
   #last_cards {
@@ -583,7 +583,7 @@ footer {
   } */
 
   .service_card img {
-  width: 50%;
+  width: 65%;
   height: 75%;
   object-fit: cover;
   border-radius: 6px;
