@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log("🔥 JS is connected!");
+  
 
   // --- Dropdown logic ---
   const navItem = document.querySelector(".our-services");
